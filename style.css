@@ -1,0 +1,48 @@
+/* Estilos do body para garantir centralização total da flor */
+body {
+  height: 100vh;
+  margin: 0;
+  background: #e0f7fa;
+  display: flex;
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
+}
+
+/* Container da flor */
+.flor {
+  position: relative;
+  width: 200px;  /* Tamanho da flor */
+  height: 200px; /* Tamanho da flor */
+  display: flex;
+  justify-content: center;  /* Centraliza o miolo */
+  align-items: center;      /* Centraliza o miolo */
+  transform: rotate(0deg);  /* Inicialmente sem rotação */
+  transition: transform 1s linear; /* Aplica uma transição suave */
+}
+
+
+/* Pétalas */
+.petala {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #f48fb1;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(calc(60deg * var(--i))) translateY(-50px); /* Ajusta a posição das pétalas */
+  transform-origin: 50% 100%; /* Faz a rotação ao redor da parte inferior */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Centro da flor (miolo) */
+.centro {
+  position: absolute;
+  top: 	40%;
+  width: 130px;
+  height: 130px;
+  background: gold;
+  border-radius: 50%;
+  transform: rotate(calc(60deg * var(--i))) translateY(-50px); /* Ajusta a posição das pétalas */
+  transform-origin: 50% 100%; /* Faz a rotação ao redor da parte inferior */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
